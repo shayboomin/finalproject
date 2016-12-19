@@ -1,7 +1,13 @@
 <html>
 <head>
-	<%=stylesheet_link_tag "flight.css"%>
+	<%= stylesheet_link_tag 'flight.css' %>
 	<title>Boomin' Travel</title>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
 </head>
 <body>
 	<ul id="nav">
@@ -12,6 +18,7 @@
 	<h1>Flight Search</h1>
 		<input type="text" name="search" placeholder="Location, Destination, etc."> 
 	<h2>Date of Departure</h2>
+		<P><input type="text" id="datepicker"></P>
 	<h2>Date of Arrival</h2>
 	<h2>Number of Passengers</h2>
 	<button>Search for Flights</button>
