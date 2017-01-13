@@ -2,7 +2,7 @@ class BoomintravelController < ApplicationController
 	def index
 		render 'home'
 	end
-	def user
+	def login
 		render 'login' 
 	end
 	def hotel
@@ -10,5 +10,8 @@ class BoomintravelController < ApplicationController
 	end
 	def flight
 		render "flight"
+	end
+	def confirm
+		render "confirm"
 	end
 end
