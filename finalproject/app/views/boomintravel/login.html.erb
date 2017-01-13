@@ -1,8 +1,30 @@
 <html>
 <head>
 	<title>Login</title>
+	<img src="logo.png" height="100px">
+	<style>
+	.container{
+	background-color: #E8869D;
+}
+form {
+	border: 2px solid #f1f1f1;
+}
+input [type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+span.password{
+	float: right;
+	padding-top: 16px;
+}
+	</style>
 </head>
 <body>
+<div class="container">
 	<div class="login">
 		<form>
 			<label><b>Username</b></label>
@@ -11,11 +33,11 @@
 			<input type="text" placeholder="Enter Password" name="password" required>
 			<button type="submit">Login</button>
 			<input type="checkbox" checked="checked">Remember Me
-		
 	</div>
 	<div class="login">
-		<span class="password">Forgot<a href="#"> password?</a></span>
+		<span class="password">Forgot <a href="#">password?</a></span>
 	</div>
 		</form>
+	</div>
 </body>
 </html>
