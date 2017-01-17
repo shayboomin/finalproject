@@ -1,31 +1,39 @@
 <html>
 <head>
 	<title>Boomin' Travel</title>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+	$( function() {
+		$( "#datepicker" ).datepicker();
+	} );
+	</script>
 	<style>
 	html{
-	background-color: #FF352B;
-}
-#nav ul{
-	list-style-type: none;
-	display: inline;
-	margin: 0;
-	padding: 0;
-}
+		background-color: #FF352B;
+	}
+	#nav ul{
+		list-style-type: none;
+		display: inline;
+		margin: 0;
+		padding: 0;
+	}
 	</style>
-  </script>
+</script>
 </head>
-<body>
+<body  style="background-image: http://view.ge/images/original/78.jpg">
 	<ul id="nav">
 		<li><a href="">Home</a></li>
 		<li><a href="login">Sign-In & Account</a></li>
 		<li><a href="flight">Booked Flights</a></li>
 	</ul>
+	<img src="http://previews.123rf.com/images/oxygen64/oxygen641108/oxygen64110800020/10322079-Design-of-blue-aeroplane-isolated-on-white-Stock-Vector-logo-travel-airplane.jpg" height="150" width="100">
 	<h1>Flight Search</h1>
-		<input type="text" name="search" placeholder="Location, Destination, etc."> 
+	<input type="text" name="search" placeholder="Location, Destination, etc.">
+	<img src="http://seethrumag.com/wp-content/uploads/2016/11/636069506023771601288741277_635877054566719987353059632_travel-the-world-dollarphotoclub-65482539.jpg" height="150" width="100">
 	<h2>Date of Departure</h2>
-		<P><input type="text" id="datepicker"></P>
+	<P><input type="text" id="datepicker"></P>
 	<h2>Date of Arrival</h2>
 	<h2>Number of Passengers</h2>
 	<button>Search for Flights</button>
 </body>
-</html> 
+</html>
