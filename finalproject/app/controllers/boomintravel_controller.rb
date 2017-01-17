@@ -14,4 +14,7 @@ class BoomintravelController < ApplicationController
 	def confirm
 		render "confirm"
 	end
+	def profile
+		render "profile"
+	end
 end

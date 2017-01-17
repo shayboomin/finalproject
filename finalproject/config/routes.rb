@@ -6,4 +6,5 @@ Rails.application.routes.draw do
  get '/hotel', to: 'boomintravel#hotel'
  get '/flight', to: 'boomintravel#flight'
  get '/confirm', to: 'boomintravel#confirm'
+ get '/profile', to: 'boomintravel#profile'
 end
