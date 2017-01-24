@@ -10,9 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 0) do
-=======
 ActiveRecord::Schema.define(version: 20170122201517) do
 
   create_table "users", force: :cascade do |t|
@@ -26,6 +23,5 @@ ActiveRecord::Schema.define(version: 20170122201517) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
->>>>>>> shaylyn
 
 end
