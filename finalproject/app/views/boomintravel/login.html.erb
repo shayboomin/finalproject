@@ -1,0 +1,78 @@
+<html>
+<head>
+	<title>Login</title>
+	<img src="/assets/logo_1.png" height="100px">
+	<style>
+#nav {
+		display: inline;
+		padding: 20px;
+	}
+.container{
+	background-color: #E8869D;
+}
+form {
+	border: 2px solid #f1f1f1;
+}
+input [type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+span.password{
+	float: right;
+	padding-top: 16px;
+}
+	</style>
+</head>
+<body>
+<div class="container">
+	<ul id="nav">
+		<li><a href="">Home</a></li>
+		<li><a href="login">Sign-In & Account</a></li>
+		<li><a href="flight">Booked Flights</a></li>
+	</ul>
+	<div class="login">
+		<form>
+			<h1>Login</h1>
+			<label><b>Username</b></label>
+			<input type="text" placeholder="Enter Username or Email" name="username" required>
+			<label><b>Password</b></label>
+			<input type="text" placeholder="Enter Password" name="password" required>
+			<button type="submit">Login</button>
+			<input type="checkbox" checked="checked">Remember Me
+	</div>
+				<p class="login button"> 
+					<input type="submit" value="Login"/> 
+				</p>
+	<div class="login">
+		<span class="password">Forgot <a href="#">password?</a></span>
+	</div>
+		</form>
+	<div id="register">
+			<form> 
+				<h1> Sign up </h1> 
+				<p> 
+					<label>Your username</label>
+					<input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="Username" />
+				</p>
+				<p> 
+					<label> Your email</label>
+					<input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="Email"/> 
+				</p>
+				<p> 
+					<label>Your password </label>
+					<input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="Password"/>
+				</p>
+				<p> 
+					<label for="passwordsignup_confirm" class="youpasswd">Please confirm your password </label>
+					<input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="Re-enter Password"/>
+				</p>
+				<p class="signin button"> 
+					<input type="submit" value="Sign up"/> 
+				</p>
+	</div>
+</body>
+</html>
