@@ -10,15 +10,41 @@
 		display: inline;
 		padding: 20px;
 	}
+	#slide {
+		position: relative;
+		padding: 10px;
+	}
+	#slide img {
+		position: absolute;
+		left: 0;
+		top:0;
+	}
 	</style>
+	<script>	
+$(function(){
+    $('#slide img:gt(0)').hide();
+    setInterval(function(){
+      $('#slide :first-child').fadeOut()
+         .next('img').fadeIn()
+         .end().appendTo('#slide');}, 
+      3000);
+});
+	</script>
 <body>
 <div id="container">
 	<ul id="nav">
-		<li><a href="">Home</a></li>
-		<li><a href="login">Sign-In or Register</a></li>
-		<li><a href="profile">Account</a></li>
-		<li><a href="flight">Booked Flights</a></li>
+		<a href=""><img class="pure-img" src="assets/home.png" height="100px"></a>
+		<a href="login"><img src="assets/signin.png" height="100px"></a>
+		<a href="profile"><img src="assets/account.png" height="100px"></a>
+		<a href="flight"><img src="assets/flight.png" height="100px"></a>
+		<a href="hotel"><img src="assets/hotel.png" height="100px"></a>
 	</ul>
+</div>
+<div id="slide">
+	<img class="mySlides" src="assets/slide/seattle.jpg" height="250px"><
+	<img class="mySlides" src="assets/slide/portland.jpg" height="250px">
+	<img class="mySlides" src="assets/slide/bevhills.jpg" height="250px">
+	<img class="mySlides" src="assets/slide/arizona.jpg" height="250px">
 </div>
 </body>
 </html>
