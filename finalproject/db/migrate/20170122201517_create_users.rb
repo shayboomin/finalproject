@@ -9,7 +9,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :address
       t.string :birthday
 
-      t.timestamps
+      t.timestamp
     end
   end
 end

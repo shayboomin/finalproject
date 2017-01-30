@@ -38,10 +38,12 @@ span.password{
 	<div class="login">
 		<form>
 			<h1>Login</h1>
-			<label><b>Username</b></label>
-			<input type="text" placeholder="Enter Username or Email" name="username" required>
-			<label><b>Password</b></label>
-			<input type="text" placeholder="Enter Password" name="password" required>
+			<label>Username </label>
+			<input id="usernamelogin" name="usernamelogin" required="required" type="text" placeholder="Username" />
+
+			<label> Password</label>
+			<input id="passwordlogin" name="passwordlogin" required="required" type="password" placeholder="Password"/> 
+
 			<button type="submit">Login</button>
 			<input type="checkbox" checked="checked">Remember Me
 	</div>
@@ -55,22 +57,25 @@ span.password{
 	<div id="register">
 			<form> 
 				<h1> Sign up </h1> 
-				<p> 
-					<label>Your username</label>
+
+<% form_tag :action => "create" do %>
+<p>User Name : <%= text_field 'user', 'name' %></p>
+<p>Password : <%= password_field 'user', 'password' %></p>
+<%= submit_tag "Create New User"%>
+<% end %>
+
+					<label>Your username </label>
 					<input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="Username" />
-				</p>
-				<p> 
+
 					<label> Your email</label>
 					<input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="Email"/> 
-				</p>
-				<p> 
+
 					<label>Your password </label>
 					<input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="Password"/>
-				</p>
-				<p> 
+
 					<label for="passwordsignup_confirm" class="youpasswd">Please confirm your password </label>
 					<input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="Re-enter Password"/>
-				</p>
+
 				<p class="signin button"> 
 					<input type="submit" value="Sign up"/> 
 				</p>
