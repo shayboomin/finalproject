@@ -7,4 +7,5 @@
  - git add .
  - git commit -m 'unique is awesome at everything, especially Git'
  - git push (update the GitHub Repo)
- 
+
+http://guides.rubyonrails.org/active_record_validations.html
