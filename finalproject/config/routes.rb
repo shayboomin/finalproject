@@ -7,5 +7,5 @@ Rails.application.routes.draw do
  get '/flight', to: 'boomintravel#flight'
  get '/confirm', to: 'boomintravel#confirm'
  get '/profile', to: 'boomintravel#profile'
- resources :users
+ resources :users 
 end
