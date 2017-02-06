@@ -3,6 +3,7 @@ class BoomintravelController < ApplicationController
 		render 'home'
 	end
 	def login
+		@user = User.new
 		render 'login' 
 	end
 	def hotel

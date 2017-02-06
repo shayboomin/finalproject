@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
 	def new
-    @user = User.new
+    		@user = User.new
   	end
 
 	def create
