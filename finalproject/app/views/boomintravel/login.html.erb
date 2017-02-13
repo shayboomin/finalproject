@@ -29,17 +29,19 @@ span.password{
 </head>
 <body>
 <div class="container">
-	<ul id="nav">
-		<li><a href="">Home</a></li>
-		<li><a href="login">Sign-In & Register</a></li>
-		<li><a href="profile">Account</a></li>
-		<li><a href="flight">Booked Flights</a></li>
-	</ul>
+	<div class="nav">
+		<a href=""><img src="assets/home.png" height="100px"></a>
+		<a href="login"><img src="assets/signin.png" height="100px"></a>
+		<a href="profile"><img src="assets/account.png" height="100px"></a>
+		<a href="flight"><img src="assets/flight.png" height="100px"></a>
+		<a href="hotel"><img src="assets/hotel.png" height="100px"></a> 
+		<a href="event"><img src="assets/event.png" height="100px"></a>
+	</div>
 	<div class="login">
 		<form>
 			<h1>Login</h1>
-			<label>Username </label>
-			<input id="usernamelogin" name="usernamelogin" required="required" type="text" placeholder="Username" />
+			<label>Email </label>
+			<input id="emaillogin" name="emaillogin" required="required" type="text" placeholder="Email" />
 
 			<label> Password</label>
 			<input id="passwordlogin" name="passwordlogin" required="required" type="password" placeholder="Password"/> 
@@ -71,7 +73,7 @@ span.password{
 
 	      <%= f.submit "Create my account", class: "btn btn-primary" %>
 	    <% end %>
-	  </div>
+	</div>
 </div>
 </body>
 </html>
