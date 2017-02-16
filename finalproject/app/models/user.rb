@@ -1,8 +1,5 @@
 class User < ApplicationRecord
 
-	validates :name, :password, presence: true
-	attr_accessor :name, :email, :password, :htoelconfirm, :flightconfirm, :address, :birthday
-
   # name should be 2 characters
   # email should be 4 characters or more
   # email should be formatted like an email

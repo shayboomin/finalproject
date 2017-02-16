@@ -18,4 +18,7 @@ class BoomintravelController < ApplicationController
 	def profile
 		render "profile"
 	end
+	def event
+		render "event"
+	end
 end
