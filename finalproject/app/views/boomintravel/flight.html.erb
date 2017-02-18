@@ -1,23 +1,23 @@
 <html>
 <head>
 	<title>Boomin' Travel</title>
-	<style>
-	.container{
-	background-color: #FF352B;
-	}
-	#nav {
-		display: inline;
-		padding: 20px;
-	}
-	</style>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script>
-	$( function() {
-		$( "#datepicker" ).datepicker();
-	} );
+		$( function() {
+			$( "#datepicker" ).datepicker();
+		} );
 	</script>
 	<%= stylesheet_link_tag "flight" %>
-</script>
+	</script>
+	<style>
+		.container{
+		background-color: #FF352B;
+		}
+		#nav {
+			display: inline;
+			padding: 20px;
+		}
+	</style>
 </head>
 <body>
 	<img src="assets/logo_1.png" height="100px">
@@ -35,10 +35,8 @@
 	<h1>Flight Search</h1>
 	<input type="text" name="search" placeholder="Location, Destination, etc.">
 	<h2>Date of Departure</h2>
-
 	<p><input type="text" id="datepicker"></p>
 	<P><input type="text" id="datepicker"></P>
-
 	<h2>Date of Arrival</h2>
 	<h2>Number of Passengers</h2>
 	<button>Search for Flights</button>
