@@ -16,19 +16,19 @@ class User < ApplicationRecord
   # unique@uniqueIsCool.com
   # validates :username, :presence => true, :uniqueness => true, :length => { :in => 3..20 }
   # validates :email, :presence => true, :uniqueness => true, :format => EMAIL_REGEX
-<<<<<<< HEAD
+
   #has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, confirmation: true
-=======
+
 # has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
->>>>>>> 2372f8c3ea9a29fdbdd089487d58acce10d1c6f0
 
 
   validates :name, presence: true, length: { minimum: 2 }
 
   # validates :terms, acceptance: true
   validates :password, confirmation: true
+  validates_confirmation_of :password
   # validates :username, exclusion: { in: %w(admin superuser) }
   # validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
   # validates :age, inclusion: { in: 0..9 }

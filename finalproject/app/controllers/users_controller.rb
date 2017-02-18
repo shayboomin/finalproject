@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   	end
 
 	def create
-<<<<<<< HEAD
+
 	    @user = User.new(user_params)
 		    if @user.save
 		        # Handle successful save
@@ -23,7 +23,6 @@ class UsersController < ApplicationController
 		session[:current_user_id] = nil
 		flash[:notice] = "No input"
 		redirect_to 'home'
-=======
 	    	@user = User.new(user_params)
 		if @user.save
 			# Handle successful save
@@ -34,7 +33,7 @@ class UsersController < ApplicationController
 		
 			<% if flash[:errors] %>
 			<% flash[:errors].each do |error| %>
-				<p><%= error %></p>
+				<p>%= error %></p>
 			<% end %>
 		<% end %>
 		
@@ -53,7 +52,6 @@ class UsersController < ApplicationController
 			redirect_to '/login'
 		end
 	end
->>>>>>> 2372f8c3ea9a29fdbdd089487d58acce10d1c6f0
 
 	def user_params
       params.require(:user).permit(:name, :email, :password)
