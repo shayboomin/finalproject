@@ -6,13 +6,15 @@
 </head>
 <body>
 <div class="container">
-	<div class="nav">
-		<a href=""><img src="assets/home.png" height="100px"></a>
-		<a href="login"><img src="assets/signin.png" height="100px"></a>
-		<a href="profile"><img src="assets/account.png" height="100px"></a>
-		<a href="flight"><img src="assets/flight.png" height="100px"></a>
-		<a href="hotel"><img src="assets/hotel.png" height="100px"></a> 
-		<a href="event"><img src="assets/event.png" height="100px"></a>
+	<div>
+		<ul id="nav">
+			<a href="/"><img class="pure-img" src="assets/home.png" height="100px"></a>
+			<a href="login"><img src="assets/signin.png" height="100px"></a>
+			<a href="profile"><img src="assets/account.png" height="100px"></a>
+			<a href="flight"><img src="assets/flight.png" height="100px"></a>
+			<a href="hotel"><img src="assets/hotel.png" height="100px"></a>
+			<a href="event"><img src="assets/event.png" height="100px"></a>
+		</ul>
 	</div>
 	<div class="login">
 		<form>
@@ -25,16 +27,19 @@
 
 			<button type="submit">Login</button>
 			<input type="checkbox" checked="checked">Remember Me
+		</form>
 	</div>
-				<p class="login button"> 
-					<input type="submit" value="Login"/> 
-				</p>
 	<div class="login">
 		<span class="password">Forgot <a href="#">password?</a></span>
 	</div>
-		</form>
 	<div class="row">
 	  <div class="signin">
+	  	<% if flash[:errors] %>
+			<% flash[:errors].each do |error| %>
+				<p><%= error %></p>
+			<% end %>
+		<% end %>
+
 	    <%= form_for(@user) do |f| %>
 	      <%= f.label :name %>
 	      <%= f.text_field :name %>
