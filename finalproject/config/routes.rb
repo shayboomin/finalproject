@@ -8,5 +8,7 @@ Rails.application.routes.draw do
  get '/confirm', to: 'boomintravel#confirm'
  get '/profile', to: 'boomintravel#profile'
  get '/event', to: 'boomintravel#event'
+ post '/login', to: 'users#login'
+ get '/logout', to: 'users#logout'
  resources :users 
 end

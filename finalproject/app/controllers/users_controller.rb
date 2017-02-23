@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	skip_before_filter :verify_authenticity_token, :only => :login
 	def show
 		@user = User.find(params[:id])
 	end
@@ -7,17 +8,15 @@ class UsersController < ApplicationController
   	end
 
 	def create
-
 	    @user = User.new(user_params)
 		if @user.save
 			# Handle successful save
+			redirect_to '/login'						
 		else
-			redirect_to :action => 'home'
+			flash[:errors] = @user.errors.full_messages	
+			redirect_to '/login'
 		end
-		if user = User.authenticate(params[:email], params[:password])
-			session[:current_user_id] = current_user
-			redirect_to 'profile'
-		end
+
 	end
 	
 	def destroy
@@ -36,6 +35,22 @@ class UsersController < ApplicationController
 			puts '-'*80			
 			redirect_to '/login'
 		end
+	end
+
+	def login
+		user = User.where(email: params[:emaillogin], password: params[:passwordlogin]) 
+		puts user[0].nil?
+		puts ']'*80
+		if not user[0].nil?
+			session[:current_user] = user
+			redirect_to '/profile'
+		else
+			redirect_to '/login'
+		end
+	end
+	def logout
+		session[:current_user] = nil
+		redirect_to '/'
 	end
 	# Login method
 	# check the email to see if it is stored in our DB
