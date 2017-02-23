@@ -1,6 +1,32 @@
 .container{
-	background-color: #E8869D;
+	background-color: #A9A9A9;
+	font-family: 'Quicksand', sans-serif;
 }
+
+.nav{
+	background-color: #EFEFEF;
+}
+
+ ul {
+	list-style-type: none;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	}
+
+li {
+	float: left;
+	}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	}
+li a:hover {
+	background-color: #FF3B3F;}
 form {
 	border: 2px solid #f1f1f1;
 }
@@ -16,9 +42,6 @@ span.password{
 	float: right;
 	padding-top: 16px;
 }
-#nav{
-	;
- }
 #header{
 	background-color: blue;
 	width: 200px;
