@@ -1,15 +1,29 @@
 html{
-	background-color: #FF352B;
+	background-color: #A9A9A9;
+	font-family: 'Quicksand', sans-serif;
 }
-#nav ul{
+
+.nav{
+	background-color: #EFEFEF;
+}
+
+ ul {
 	list-style-type: none;
 	display: inline;
 	margin: 0;
 	padding: 0;
-}
-#nav{
-	
-}
-#header{
-	background-color: yellow;
- }
+	}
+
+li {
+	float: left;
+	}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	}
+li a:hover {
+	background-color: #FF3B3F;}
