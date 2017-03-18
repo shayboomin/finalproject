@@ -16,25 +16,25 @@
 		text-align: center;
 	}
 	p {width: 500px;}
-	#slide {
-		position: relative;
-		padding: 10px;
-	}
-	#slide img {
-		position: absolute;
-		left: 0;
-		top:0;
-	}
 	</style>
 	<script>	
-// $(function(){
-//    $('#slide img:gt(0)').hide();
-//    setInterval(function(){
-//      $('#slide :first-child').fadeOut()
-//         .next('img').fadeIn()
-//         .end().appendTo('#slide');}, 
-//      3000);
-//});
+	var slideIndex = 1;
+	showDivs(slideIndex);
+
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  if (n > x.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = x.length}
+	  for (i = 0; i < x.length; i++) {
+	     x[i].style.display = "none";  
+	  }
+	  x[slideIndex-1].style.display = "block";  
+	}
 	</script>
 <body>
 <div class="container">
@@ -52,13 +52,22 @@
 
 
 <br><br>
+<div class="slides">
+  <img class="mySlides" src="assets/slide/seattle.jpg" style="width:25%">
+  <img class="mySlides" src="assets/slide/portland.jpg" style="width:25%">
+  <img class="mySlides" src="assets/slide/bevhills.jpg" style="width:25%">
+  <img class="mySlides" src="assets/slide/arizona.jpg" style="width:25%">
+
+  <button class="display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
 <!--  <div id="slide">
 	<img class="mySlides" src="assets/slide/seattle.jpg" height="250px"><
 	<img class="mySlides" src="assets/slide/portland.jpg" height="250px">
 	<img class="mySlides" src="assets/slide/bevhills.jpg" height="250px">
 	<img class="mySlides" src="assets/slide/arizona.jpg" height="250px">
 </div> -->
-	<p>A personal concierge present right in front of you. Simply enter in location, dates of travel, reason for traveling (business or personal), and interests. The site then highlights local happenings, restaurants, weather conditions, etc.</p>
+	<p>A personal concierge present right in front of you. Simply enter in location, dates of travel, reason for traveling (business or personal), and interests. The site then highlights local happenings, restaurants, weather conditions, etc. A platform to discover unique things and experience places the way the locals do.</p>
 
 </div>
 </body>

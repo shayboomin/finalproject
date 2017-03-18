@@ -16,7 +16,7 @@
 			<li><a href="hotel">HOTELS</a></li>
 			<li><a href="event">EVENTS</a></li>
 			<button><a href="/">Logout</a></button>
-		</ul>
+
 		<br><br>
 	</div>
 	<div class="login">
@@ -38,7 +38,7 @@
 	</div>
 	<div class="row">
 	  <div class="signin">
-	<h1>Register</h1>
+
 	  	<% if flash[:errors] %>
 			<% flash[:errors].each do |error| %>
 				<p><%= error %></p>
@@ -46,6 +46,7 @@
 		<% end %>
 
 	    <%= form_for(@user) do |f| %>
+	<h1>Register</h1>
 	      <%= f.label :name %>
 	      <%= f.text_field :name %>
 
