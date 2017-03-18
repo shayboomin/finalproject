@@ -1,5 +1,6 @@
 <html>
 <head>
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 <link rel="stylesheet" href="stylesheets/login.css">
 	<title>Login</title>
 	<img src="/assets/logo_1.png" height="100px">
@@ -8,21 +9,23 @@
 <div class="container">
 	<div class="nav">
 		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="login">Register/Login</a></li>
-			<li><a href="profile">Profile</a></li>
-			<li><a href="flight">Flight</a></li>
-			<li><a href="hotel">Hotel</a></li>
-			<li><a href="event">Event</a></li>
+			<li><a href="/">HOME</a></li>
+			<li><a href="login">REGISTER/LOGIN</a></li>
+			<li><a href="profile">PROFILE</a></li>
+			<li><a href="flight">FLIGHTS</a></li>
+			<li><a href="hotel">HOTELS</a></li>
+			<li><a href="event">EVENTS</a></li>
+			<button><a href="/">Logout</a></button>
 		</ul>
+		<br><br>
 	</div>
 	<div class="login">
 		<form method="post" action="/login">
-			<h1>Login</h1>
+			<br><h1>Login</h1>
 			<%= csrf_meta_tags %>
 			<label>Email </label>
 			<input id="emaillogin" name="emaillogin" required="required" type="text" placeholder="Email" />
-
+<br><br>
 			<label> Password</label>
 			<input id="passwordlogin" name="passwordlogin" required="required" type="password" placeholder="Password"/> 
 
@@ -35,6 +38,7 @@
 	</div>
 	<div class="row">
 	  <div class="signin">
+	<h1>Register</h1>
 	  	<% if flash[:errors] %>
 			<% flash[:errors].each do |error| %>
 				<p><%= error %></p>
@@ -47,11 +51,11 @@
 
 	      <%= f.label :email %>
 	      <%= f.email_field :email %>
-
+<br><br>
 	      <%= f.label :password %>
 	      <%= f.password_field :password %>
 
-	      <%= f.label :password_confirmation, "Confirmation" %>
+	      <%= f.label :password_confirmation, "Password Confirmation" %>
 	      <%= f.password_field :password_confirmation %>
 
 	      <%= f.submit "Create my account", class: "btn btn-primary" %>

@@ -1,11 +1,13 @@
 <html>
 <head>
+<title>Profile</title>
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 <img src="assets/logo_1.png" height="100px">
 <style>
 .container {
 	background-color: #FFA7A0;
 }
-#nav {
+.nav {
 	display: inline;
 	padding: 20px;
 }
@@ -15,15 +17,16 @@
 <div class="container">
 	<div class="nav">
 		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="login">Register/Login</a></li>
-			<li><a href="profile">Profile</a></li>
-			<li><a href="flight">Flight</a></li>
-			<li><a href="hotel">Hotel</a></li>
-			<li><a href="event">Event</a></li>
+			<li><a href="/">HOME</a></li>
+			<li><a href="login">REGISTER/LOGIN</a></li>
+			<li><a href="profile">PROFILE</a></li>
+			<li><a href="flight">FLIGHTS</a></li>
+			<li><a href="hotel">HOTELS</a></li>
+			<li><a href="event">EVENTS</a></li>
+			<button><a href="/">Logout</a></button>
 		</ul>
 	</div>
-	<img src="assets/user.svg" height="200px">
+	<br><br><br><img src="assets/user.svg" height="200px">
 	<% if session[:current_user] %>
 		<p>Name: <%= session[:current_user][0]["name"] %></p>
 		<p>Phone Number:</p>
@@ -33,5 +36,6 @@
 		<p>Last Item Booked</p>
 	<% end %>
 </div>
+
 </body>
 </html>

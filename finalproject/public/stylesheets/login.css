@@ -1,9 +1,11 @@
 #nav {
 	display: inline;
 	padding: 20px;
+	width: 100%;
+	text-align: center;
 }
 .container{
-	background-color: #E8869D;
+	background-color: #FFA7A0;
 	font-family: 'Quicksand', sans-serif;
 }
 form {
