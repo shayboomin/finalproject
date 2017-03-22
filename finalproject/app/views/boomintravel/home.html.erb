@@ -1,10 +1,10 @@
 <html>
 <head>
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+<link rel="stylesheet" href="stylesheets/home.css">
 	<title>Home</title>
 	<img src="assets/logo_1.png" height="100px">
 	<style>
-	
 	.container {
 		
 	}
@@ -15,11 +15,18 @@
 		width: 100%;
 		text-align: center;
 	}
-	p {width: 500px;}
+	p {
+		width: 500px;
+	}
+
+	footer {
+	width: 100%
+	letter-spacing: 5px;
+}
 	</style>
 	<script>	
-	var slideIndex = 1;
-	showDivs(slideIndex);
+	var slideIndex = 1; //first image
+	showDivs(slideIndex); //display first image
 
 	function plusDivs(n) {
 	  showDivs(slideIndex += n);
@@ -31,9 +38,9 @@
 	  if (n > x.length) {slideIndex = 1}    
 	  if (n < 1) {slideIndex = x.length}
 	  for (i = 0; i < x.length; i++) {
-	     x[i].style.display = "none";  
+	     x[i].style.display = "none";  //hides elements
 	  }
-	  x[slideIndex-1].style.display = "block";  
+	  x[slideIndex-1].style.display = "block";  //displays
 	}
 	</script>
 <body>
@@ -56,7 +63,7 @@
   <img class="mySlides" src="assets/slide/seattle.jpg" style="width:25%">
   <img class="mySlides" src="assets/slide/portland.jpg" style="width:25%">
   <img class="mySlides" src="assets/slide/bevhills.jpg" style="width:25%">
-  <img class="mySlides" src="assets/slide/arizona.jpg" style="width:25%">
+  <img class="mySlides" src="assets/slide/arizona.jpg" style="width:25%" height="200px">
 
   <button class="display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="display-right" onclick="plusDivs(1)">&#10095;</button>
@@ -71,4 +78,7 @@
 
 </div>
 </body>
+<footer>
+	<p>Boomin' Travel © 2017. All rights reserved.</p>
+</footer>
 </html>
