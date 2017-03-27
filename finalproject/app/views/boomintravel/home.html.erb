@@ -1,20 +1,19 @@
 <html>
 <head>
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-<link rel="stylesheet" href="stylesheets/home.css">
+<link rel="stylesheet" href="public/stylesheets/home.css">
 	<title>Home</title>
 	<img src="assets/logo_1.png" height="100px">
 	<style>
-	.container {
-		
-	}
-	.nav ul{
-		background-color: ;
-		display: inline;
-		padding: 20px;
-		width: 100%;
-		text-align: center;
-	}
+html{
+	background-color: ;
+	font-family: 'Quicksand', sans-serif;
+}
+.nav {width: 100%; margin-left: 130px;}
+ol {list-style:none; display: inline;}
+ol li {float: left; padding: 10px; letter-spacing: 5px;}
+li a {display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;}
+li a:hover {background-color: #FF3B3F;}
 	p {
 		width: 500px;
 	}
@@ -24,7 +23,7 @@
 	letter-spacing: 5px;
 }
 	</style>
-	<script>	
+<!-- 	<script>	
 	var slideIndex = 1; //first image
 	showDivs(slideIndex); //display first image
 
@@ -42,24 +41,68 @@
 	  }
 	  x[slideIndex-1].style.display = "block";  //displays
 	}
-	</script>
+	</script> -->
 <body>
 <div class="container">
 	<div class="nav">
-		<ul>
-			<li><a href="/">HOME</a></li>
-			<li><a href="login">REGISTER/LOGIN</a></li>
-			<li><a href="profile">PROFILE</a></li>
-			<li><a href="flight">FLIGHTS</a></li>
-			<li><a href="hotel">HOTELS</a></li>
-			<li><a href="event">EVENTS</a></li>
-			<button><a href="/">Logout</a></button>
-		</ul>
+	<ol id="nav">
+      <li><a href="/">HOME</a></li>
+      <li><a href="login">REGISTER/LOGIN</a></li>
+      <li><a href="profile">PROFILE</a></li>
+      <li><a href="flight">FLIGHTS</a></li>
+      <li><a href="hotel">HOTELS</a></li>
+      <li><a href="event">EVENTS</a></li>
+	</ol>
 	</div>
-
-
 <br><br>
-<div class="slides">
+<div class="container">
+  
+  <section class="programs">
+    <a rel="nofollow" rel="noreferrer"href="#">
+      <div class="content">
+        <h2 > San Francisco / California Tours</h2>
+        <h3>Vista Grande Helicopter Tour</h3>
+        <p>Imagine San Francisco as you've never seen it before! On a San Francisco Vista Grande Helicopter Tour you'll see all the famous sites.</p>
+        <ul>
+          <li ><i class="fa fa-clock-o"></i><span>Duration: 25 - 30 minutes</span></li>
+          <li ><i class="fa fa-globe"></i><span>Type: Helicopter Tours</span></li>
+        </ul> 
+      </div>
+    </a>
+    <img src="assets/home/gate.jpg">
+  </section>
+  
+  <section class="programs">
+    <a rel="nofollow" rel="noreferrer"href="#">
+      <div class="content">
+        <h2 >Seattle / Washington</h2>
+        <h3>Seattle Combo Tour</h3>
+        <p>Comprehensive tour with the best Seattle has to offer with a city tour, including a stop at Pike Place Market and a Boeing Factory tour.</p>
+        <ul>
+          <li ><i class="fa fa-clock-o"></i><span>Duration: 10 hours (approx.)</span></li>
+          <li ><i class="fa fa-globe"></i><span>Type: Exclusive Tours</span></li>
+        </ul> 
+      </div>
+    </a>
+    <img src="assets/home/needle.jpg">
+  </section>
+  
+  <section class="programs">
+    <a rel="nofollow" rel="noreferrer"href="#">
+      <div class="content">
+        <h2 >Denarau Island / Fiji</h2>
+        <h3>Snorkeling within the Mamanuca Islands</h3>
+        <p>Adrenalin Fiji offers an enjoyable experience within the Mamanuca Islands to explore stunning coral reefs and be surrounded by colorful tropical marine life.</p>
+        <ul>
+          <li><i class="fa fa-clock-o"></i><span>Duration: 7 - 12 hours</span></li>
+          <li><i class="fa fa-globe"></i><span>Type: Scuba & Snorkelling</span></li>
+        </ul> 
+      </div>
+    </a>
+    <img src="assets/home/denarau.jpg">
+  </section>
+</div>
+<!-- <div class="slides">
   <img class="mySlides" src="assets/slide/seattle.jpg" style="width:25%">
   <img class="mySlides" src="assets/slide/portland.jpg" style="width:25%">
   <img class="mySlides" src="assets/slide/bevhills.jpg" style="width:25%">
@@ -68,14 +111,7 @@
   <button class="display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
-<!--  <div id="slide">
-	<img class="mySlides" src="assets/slide/seattle.jpg" height="250px"><
-	<img class="mySlides" src="assets/slide/portland.jpg" height="250px">
-	<img class="mySlides" src="assets/slide/bevhills.jpg" height="250px">
-	<img class="mySlides" src="assets/slide/arizona.jpg" height="250px">
-</div> -->
-	<p>A personal concierge present right in front of you. Simply enter in location, dates of travel, reason for traveling (business or personal), and interests. The site then highlights local happenings, restaurants, weather conditions, etc. A platform to discover unique things and experience places the way the locals do.</p>
-
+	<p>A personal concierge present right in front of you. Simply enter in location, dates of travel, reason for traveling (business or personal), and interests. The site then highlights local happenings, weather conditions, etc. A platform to discover unique things and experience places the way the locals do.</p> -->
 </div>
 </body>
 <footer>
