@@ -1,6 +1,5 @@
-html{
-	background: linear-gradient(#da387d, #eb705a);
-	font-family: 'Quicksand', sans-serif;
+html {
+	background-color: yellow;
 }
 .nav {width: 100%; margin-left: 50px;}
 ol {list-style:none; display: inline;}
@@ -11,6 +10,10 @@ li a {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;}
-li a:hover {
-	background-color: #E82F88;
-} 
+li a:hover {background-color: #E82F88;} 
+footer {
+	width: 100%;
+	letter-spacing: 4px;
+	margin-left: 200px;
+	margin-top: 50px;
+}
