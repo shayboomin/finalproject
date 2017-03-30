@@ -1,12 +1,12 @@
 html {
-	background-color: yellow;
+	background-color: ;
 }
 .nav {width: 100%; margin-left: 50px;}
 ol {list-style:none; display: inline;}
 ol li {float: left; padding: 10px; letter-spacing: 5px;}
 li a {
 	display: block;
-	color: white;
+	color: #FCFBE3;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;}

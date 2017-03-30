@@ -5,7 +5,7 @@
 	<%= stylesheet_link_tag "flight" %>
 </head>
 <body>
-	<img src="assets/logo_1.png" height="100px">
+	<a href="/"><img src="assets/logo_1.png" height="100px"></a>
 </head>
 <body>
 <div class="container">
@@ -17,18 +17,50 @@
       <li><a href="flight">FLIGHTS</a></li>
       <li><a href="hotel">HOTELS</a></li>
       <li><a href="event">EVENTS</a></li>
-	</ol>
+	</ol><br><br><br><br>
 	</div>
-	<br><br><br>
-	<h1>Flight Search</h1>
-	<input type="text" name="search" placeholder="Location, Destination, etc.">
-	<h2>Date of Departure</h2>
-	<p><input type="text" id="datepicker"></p>
-	<h2>Date of Arrival</h2>
-	<p><input type="text" id="datepicker"></p>
-	<h2>Number of Passengers</h2>
-	<button>Search for Flights</button>
-</div>
+	<div class='center'>
+      <h1><span class="fontawesome-plane"></span> Flight Search</h1>
+      <h2>Select your <b>first</b> flight dates below</h2>
+      <div id="flight-datepicker" class="input-daterange input-group">
+        <div class="form-item">
+          <label>Depart on</label><span class="fontawesome-calendar"></span>
+          <input type="text" id="datepicker" name="start" placeholder="Select depart date" data-date-format="DD, MM d" class="input-sm form-control"/><span class="date-text date-depart"></span>
+        </div>
+        <div class="form-item">
+          <label>Return on</label><span class="fontawesome-calendar"></span>
+          <input type="text" id="datepicker" name="end" placeholder="Select return date">
+        </div>  
+      </div>
+      <div id="flight-datepicker">
+        <div class="form-item">
+          <label>From</label>
+          <input placeholder="Where are you flying from?">
+        </div>
+        <div class="form-item">
+          <label>To</label>
+          <input type="text" placeholder="Enter your destination city/airport">
+        </div>  
+      </div>
+      <div id="flight-datepicker">
+        <div class="form-item">
+          <label>Preferred Airline</label>
+           <select >
+                <option value="na">--</option>
+                <option value="AL">Alaska</option>
+                <option value="AA">American</option>
+                <option value="DA">Delta</option>
+                <option value="FA">Frontier</option>
+                <option value="JB">Jetblue</option>
+                <option value="SWA">Southwest</option>
+                <option value="UA">United</option>        
+              </select>
+		</div>
+      </div>
+      <div class="input-group">
+        <button name="button" id="trip-search">Search!</button>
+      </div>
+    </div>
 </body>
 <footer>
 	<p>Boomin' Travel&trade; 2017. All rights reserved.</p>

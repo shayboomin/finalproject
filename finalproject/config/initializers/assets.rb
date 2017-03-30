@@ -10,14 +10,14 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 
-Rails.application.config.assets.precompile += %w( flight.css )
-Rails.application.config.assets.precompile += %w( login.css )
-Rails.application.config.assets.precompile += %w( confirm.css )
+
 Rails.application.config.assets.precompile += %w( homepage.css )
 Rails.application.config.assets.precompile += %w( profile.css )
-Rails.application.config.assets.precompile += %w( userportal.css )
-Rails.application.config.assets.precompile += %w( website.css )
+Rails.application.config.assets.precompile += %w( login.css )
+Rails.application.config.assets.precompile += %w( event.css )
+Rails.application.config.assets.precompile += %w( flight.css )
 
+Rails.application.config.assets.precompile += %w( confirm.css )
 Rails.application.config.assets.precompile += %w( account.png )
 Rails.application.config.assets.precompile += %w( flight.png )
 Rails.application.config.assets.precompile += %w( home.png )
