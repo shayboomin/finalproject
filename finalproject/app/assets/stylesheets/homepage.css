@@ -10,7 +10,7 @@
   
 }
 html {
-  background: linear-gradient(#da387d, #eb705a);
+  background: linear-gradient(#DA387D, #EB705A);
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -98,7 +98,7 @@ h3 {
   width: 90%;
 }
 p {
-  font-size: 0.875em;
+  font-size: 14px;
 }
 ul{
   display:none;
@@ -129,7 +129,7 @@ div.content {
   margin: 0 auto;
 }
 h3 {
-   font-size: 1.250em;
+   font-size: 20px;
 }
 p {
   display: block;

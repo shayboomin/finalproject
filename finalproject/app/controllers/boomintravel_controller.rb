@@ -39,6 +39,9 @@ class BoomintravelController < ApplicationController
 
 		render 'hotel'
 	end
+	def requestHotel
+		
+	end
 	def flight
 		render 'flight'
 	end

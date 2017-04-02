@@ -5,14 +5,7 @@
 	<title>Book Your Hotel</title>
 	<a href="/"><img src="assets/logo_1.png" height="100px"></a>
 	<style>
-	.container{
-	background-color: ;
-}
-	.nav {
-	display: inline;
-	padding: 20px;
-	}
-	
+	.nav {margin-left: 170px;}
 	</style>
 </head>
 <body>
@@ -26,16 +19,15 @@
       <li><a href="hotel">HOTELS</a></li>
       <li><a href="event">EVENTS</a></li>
 	</ol>
-	</div>
-	<br><br><br><h1>Hotel Search</h1>
-		<input type="text" name="search" placeholder="Location, Destination, etc.">
+	</div><br><br><br><br>
+	<h1>Hotel Search</h1>
+		<input type="text" name="search" placeholder="Location, Destination, etc."> <%=:city%>
 	<h2>Check-In Date</h2>
 	<h2>Check-Out Date</h2>
-	<h2>Number of People</h2>
 	<button>Search for Hotels</button>
 </div>
 <% @hotelList.each do |hotel| %>
-		<p><%= hotel["name"] %></p>
+		<p><%= hotel["name"] %></p> 
 <% end %>
 </body>
 <footer>
