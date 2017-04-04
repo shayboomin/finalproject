@@ -21,24 +21,28 @@ class BoomintravelController < ApplicationController
 		render 'login' 
 	end
 	def hotel
+
+		render 'hotel'
+	end
+	def requestHotel
 		api = Expedia::Api.new
 		# Method to search for a hotel. see http://developer.ean.com/docs/hotel-list/
+		
+		#  place our parameters in this get_list method 
 		response = api.get_list({
 				:city => 'Seattle', 
 				:stateProvinceCode => 'WA', 
 				:countryCode=>"US", 
 				:arrivalDate => "09/04/2017", 
 				:departureDate=>"09/05/2017", 
-				:room1=>"1,3", 
-				:room2=>"1,5"
 			})
 
 		puts '/' *80
 		@hotelList = response.body["HotelListResponse"]["HotelList"]["HotelSummary"]
 		puts '/' *80
-
-		render 'hotel'
+		# render a view with all those hotels on it
 	end
+	
 	def flight
 		render 'flight'
 	end

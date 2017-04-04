@@ -28,15 +28,20 @@
 		</ul>
 	</div>
 	<br><br><h1>Hotel Search</h1>
+	<%# form will have to go to an action. that action takes in the below inputs as a parameter %>
+	<form action="">
 		<input type="text" name="search" placeholder="Location, Destination, etc.">
-	<h2>Check-In Date</h2>
-	<h2>Check-Out Date</h2>
-	<h2>Number of People</h2>
-	<button>Search for Hotels</button>
+		<h2>Check-In Date</h2>
+		<input type="date">
+		<h2>Check-Out Date</h2>
+		<input type="date">
+		<h2>Number of People</h2>
+		<button>Search for Hotels</button>
+	</form>
 </div>
-<% @hotelList.each do |hotel| %>
-		<p><%= hotel["name"] %></p>
-<% end %>
+<%#<% @hotelList.each do |hotel| %>
+		<%#<p><%= hotel["name"] %>
+<%#<% end %>
 </body>
 <footer>
 	<p>Boomin' Travel © 2017. All rights reserved.</p>
