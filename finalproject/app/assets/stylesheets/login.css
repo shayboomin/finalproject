@@ -1,53 +1,26 @@
 .container{
-	background-color: #FFA7A0;
 	font-family: 'Quicksand', sans-serif;
 }
-
-.nav{
-	background-color: #EFEFEF;
-}
-
- ul {
-	list-style-type: none;
-	display: inline;
-	margin: 0;
-	padding: 0;
-	}
-
-li {
-	float: left;
-	}
-
+footer {width: 100%; letter-spacing: 4px; margin-left: 200px;}
+.nav {width: 100%; margin-left: 170px;}
+ol {list-style:none; display: inline;}
+ol li {float: left; padding: 10px; letter-spacing: 5px;}
 li a {
 	display: block;
-	color: white;
-	text-align: center;
+	color: #FCFBE3; text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	}
-li a:hover {
-	background-color: #FF3B3F;}
-form {
-	border: 2px solid #f1f1f1;
 }
+li a:hover {background-color: #E82F88;} 
 input [type=text], input[type=password] {
 	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
 	display: inline-block;
-	border: 1px solid #ccc;
 	box-sizing: border-box;
 }
 span.password{
 	float: right;
 	padding-top: 16px;
 }
-#header{
-	background-color: blue;
-	width: 200px;
-	height: 200px;
-}
-#login{
-	color: red;
-	font-family: "Times New Roman";
-}
+

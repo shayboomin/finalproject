@@ -7,10 +7,11 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  
 }
 
 html {
-  background: linear-gradient(#da387d, #eb705a);
+  background: linear-gradient(#DA387D, #EB705A);
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -19,6 +20,13 @@ html {
   margin: 0;
   padding: 0;
 }
+
+footer {width: 100%; letter-spacing: 4px; margin-left: 200px;}
+.nav {width: 100%; margin-left: 50px;}
+ol {list-style:none; display: inline;}
+ol li {float: left; padding: 10px; letter-spacing: 5px;}
+li a {display: block; color: #FCFBE3; text-align: center; padding: 14px 16px; text-decoration: none;}
+li a:hover {background-color: #E82F88;} 
 
 a:hover {
   text-decoration: none !important;
@@ -101,7 +109,7 @@ h3 {
 }
 
 p {
-  font-size: 0.875em;
+  font-size: 14px;
 }
 
 ul {

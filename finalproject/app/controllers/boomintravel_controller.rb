@@ -42,7 +42,6 @@ class BoomintravelController < ApplicationController
 		puts '/' *80
 		# render a view with all those hotels on it
 	end
-	
 	def flight
 		render 'flight'
 	end

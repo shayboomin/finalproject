@@ -2,29 +2,24 @@
 <head>
 <title>Profile</title>
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-<img src="assets/logo_1.png" height="100px">
-<style>
-.container {
-	background-color: #FFA7A0;
-}
-.nav {
-	display: inline;
-	padding: 20px;
-}
+<link rel="stylesheet" href="assets/profile.css">
+<style type="text/css">
+	html{background-color: #F3E88C;}
 </style>
+<a href="/"><img src="assets/logo_1.png" height="100px"></a>
 </head>
 <body>
 <div class="container">
 	<div class="nav">
-		<ul>
-			<li><a href="/">HOME</a></li>
-			<li><a href="login">REGISTER/LOGIN</a></li>
-			<li><a href="profile">PROFILE</a></li>
-			<li><a href="flight">FLIGHTS</a></li>
-			<li><a href="hotel">HOTELS</a></li>
-			<li><a href="event">EVENTS</a></li>
-			<button><a href="/">Logout</a></button>
-		</ul>
+	<ol id="nav">
+      <li><a href="/">HOME</a></li>
+      <li><a href="login">REGISTER<br>LOGIN</a></li>
+      <li><a href="profile">PROFILE</a></li>
+      <li><a href="flight">FLIGHTS</a></li>
+      <li><a href="hotel">HOTELS</a></li>
+      <li><a href="event">EVENTS</a></li>
+	  <button><a href="/">Logout</a></button>
+	</ol>
 	</div>
 	<br><br><br><img src="assets/user.svg" height="200px">
 	<% if session[:current_user] %>
@@ -39,6 +34,6 @@
 
 </body>
 <footer>
-	<p>Boomin' Travel © 2017. All rights reserved.</p>
+	<p>Boomin' Travel&trade; 2017. All rights reserved.</p>
 </footer>
 </html>
