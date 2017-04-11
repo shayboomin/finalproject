@@ -1,4 +1,5 @@
 class BoomintravelController < ApplicationController
+	skip_before_filter :verify_authenticity_token, :only => :requestHotel
 
 	Expedia.cid = 501048
 	Expedia.api_key = '60nn3elg2bfbcs1lsrmqu1l1oo'
@@ -29,18 +30,21 @@ class BoomintravelController < ApplicationController
 		# Method to search for a hotel. see http://developer.ean.com/docs/hotel-list/
 		
 		#  place our parameters in this get_list method 
+		#   Parameters: {"city"=>"Bellevue", "checkIn"=>"2018-01-01", "checkOut"=>"2018-01-02"}
+		checkIn = Date.parse(params["checkIn"]).strftime("%m/%d/%Y")
+		checkOut = Date.parse(params["checkOut"]).strftime("%m/%d/%Y")
 		response = api.get_list({
-				:city => 'Seattle', 
-				:stateProvinceCode => 'WA', 
+				:city => params["city"],
 				:countryCode=>"US", 
-				:arrivalDate => "09/04/2017", 
-				:departureDate=>"09/05/2017", 
+				:arrivalDate => checkIn, 
+				:departureDate=> checkOut, 
 			})
-
+		
 		puts '/' *80
 		@hotelList = response.body["HotelListResponse"]["HotelList"]["HotelSummary"]
+		@hotelList.each { |hotel| puts hotel["name"]; puts hotel["city"] }	
 		puts '/' *80
-		# render a view with all those hotels on it
+		# render a view with all those hotels displayed
 	end
 	def flight
 		render 'flight'

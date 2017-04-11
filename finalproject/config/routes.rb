@@ -10,5 +10,6 @@ Rails.application.routes.draw do
  get '/event', to: 'boomintravel#event'
  post '/login', to: 'users#login'
  get '/logout', to: 'users#logout'
+ post '/requestHotel', to: 'boomintravel#requestHotel' 
  resources :users 
 end

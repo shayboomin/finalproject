@@ -20,12 +20,12 @@
 	</ol>
 	</div><br><br><br><br>
 	<h1>Hotel Search</h1>
-	<form action="">
-		<input type="text" name="search" placeholder="Location, Destination, etc.">
+	<form action="/requestHotel" method='post'>
+		<input type="text" name="city" placeholder="Location, Destination, etc.">
 		<h2>Check-In Date</h2>
-		<input type="date">
+		<input type="date" name='checkIn'>
 		<h2>Check-Out Date</h2>
-		<input type="date">
+		<input type="date" name='checkOut'>
 		<h2>Number of People</h2>
 		<button>Search for Hotels</button>
 	</form>
