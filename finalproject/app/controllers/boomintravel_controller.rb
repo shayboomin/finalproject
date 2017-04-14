@@ -58,4 +58,7 @@ class BoomintravelController < ApplicationController
 	def event
 		render 'event'
 	end
+	def requestHotels
+		render 'search'
+	end
 end
