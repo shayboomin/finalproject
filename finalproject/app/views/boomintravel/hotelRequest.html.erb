@@ -1,0 +1,17 @@
+<html>
+<% @hotelList.each do |hotel| %>
+<p><%= hotel["name"] %></p>
+<p><%= hotel["city"] %></p>
+<p><%= hotel["hotelId"] %></p>
+<p><%= hotel["supplierType"] %></p>
+<p>Rate Key: <%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["RateInfos"]["RateInfo"]["RoomGroup"]["Room"]["rateKey"] %></p>
+<p>Rome Type Code: <%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["roomTypeCode"] %></p>
+<p><%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["rateCode"]%></p>
+<p><%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageRate"]%>
+<form action="">
+<input type="hidden" name="hotelId" value = <%= hotel["hotelId"] %>>
+<button>Book Now</button>
+</form>
+<hr>
+<% end %>
+</html>

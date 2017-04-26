@@ -25,6 +25,11 @@ class BoomintravelController < ApplicationController
 
 		render 'hotel'
 	end
+
+	# this is where we are creating the request to the Expedia API. It currently does seem to send off a request to the api based off of the information we submit on our view page. the next step is to create a view that displays that information.
+
+	# Sound right? Haha you can type yes :) 
+
 	def requestHotel
 		api = Expedia::Api.new
 		# Method to search for a hotel. see http://developer.ean.com/docs/hotel-list/
@@ -41,9 +46,11 @@ class BoomintravelController < ApplicationController
 			})
 		
 		puts '/' *80
+		puts response
 		@hotelList = response.body["HotelListResponse"]["HotelList"]["HotelSummary"]
 		@hotelList.each { |hotel| puts hotel["name"]; puts hotel["city"] }	
 		puts '/' *80
+		render 'hotelRequest'
 		# render a view with all those hotels displayed
 	end
 	def flight
@@ -58,4 +65,5 @@ class BoomintravelController < ApplicationController
 	def event
 		render 'event'
 	end
+	
 end
