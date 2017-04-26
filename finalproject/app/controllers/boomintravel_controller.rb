@@ -65,5 +65,5 @@ class BoomintravelController < ApplicationController
 	def event
 		render 'event'
 	end
-	
+
 end
