@@ -1,4 +1,5 @@
 <html>
+<<<<<<< HEAD
 <head>
 	<title>Search Results</title>
 </head>
@@ -14,6 +15,27 @@
 	</div><br><br><br>
 
 <h1>Search Results</h1>
-<%= f.text_field :city %>
 <%= hotel["city"] %>
+
+<% @hotelList.each do |hotel| %>
+<p><%= hotel["name"] %></p>
+<p><%= hotel["city"] %></p>
+<p><%= hotel["hotelId"] %></p>
+<p><%= hotel["supplierType"] %></p>
+<p>Rate Key: <%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["RateInfos"]["RateInfo"]["RoomGroup"]["Room"]["rateKey"] %></p>
+<p>Room Type Code: <%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["roomTypeCode"] %></p>
+<p>Rate Code: <%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["rateCode"]%></p>
+<p>Average Rate:<%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageRate"]%>
+<form action="">
+      <input type="hidden" name="hotelId" value= <%= hotel["hotelId"] %>>
+      <input type="hidden" name="supplierType" value= <% hotel["supplierType"] %>>
+      <input type="hidden" name="rateKey" value= <%hotel["RoomRateDetailsList"]["RoomRateDetails"]["RateInfos"]["RateInfo"]["RoomGroup"]["Room"]["rateKey"] %>>
+      <input type="hidden" name="roomTypeCode" value= <% hotel["RoomRateDetailsList"]["RoomRateDetails"]["roomTypeCode"] %>>
+      <input type="hidden" name="rateCode" value= <% hotel["RoomRateDetailsList"]["RoomRateDetails"]["rateCode"]%>>
+      <input type="hidden" name="averageRate" value= <% hotel["RoomRateDetailsList"]["RoomRateDetails"]["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageRate"]%>>
+<button>Book Now</button>
+</form>
+<hr>
+<% end %>
+
 </html>
