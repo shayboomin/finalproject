@@ -1,4 +1,21 @@
 <html>
+<head>
+	<title>Search Results</title>
+</head>
+	<div class="nav">
+	<ol id="nav">
+      <li><a href="/">HOME</a></li>
+      <li><a href="login">REGISTER<br>LOGIN</a></li>
+      <li><a href="profile">PROFILE</a></li>
+      <li><a href="flight">FLIGHTS</a></li>
+      <li><a href="hotel">HOTELS</a></li>
+      <li><a href="event">EVENTS</a></li>
+	</ol>
+	</div><br><br><br>
+
+<h1>Search Results</h1>
+<%= hotel["city"] %>
+
 <% @hotelList.each do |hotel| %>
 <%= hotel %>
 <h2>Hotel: <%= hotel["name"] %></h2>
@@ -9,13 +26,19 @@
 <p><%= hotel["hotelId"] %></p>
 <p><%= hotel["supplierType"] %></p>
 <p>Rate Key: <%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["RateInfos"]["RateInfo"]["RoomGroup"]["Room"]["rateKey"] %></p>
-<p>Rome Type Code: <%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["roomTypeCode"] %></p>
-<p><%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["rateCode"]%></p>
-<p><%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageRate"]%>
+<p>Room Type Code: <%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["roomTypeCode"] %></p>
+<p>Rate Code: <%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["rateCode"]%></p>
+<p>Average Rate:<%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageRate"]%>
 <form action="">
-<input type="hidden" name="hotelId" value = <%= hotel["hotelId"] %>>
+      <input type="hidden" name="hotelId" value= <%= hotel["hotelId"] %>>
+      <input type="hidden" name="supplierType" value= <% hotel["supplierType"] %>>
+      <input type="hidden" name="rateKey" value= <%hotel["RoomRateDetailsList"]["RoomRateDetails"]["RateInfos"]["RateInfo"]["RoomGroup"]["Room"]["rateKey"] %>>
+      <input type="hidden" name="roomTypeCode" value= <% hotel["RoomRateDetailsList"]["RoomRateDetails"]["roomTypeCode"] %>>
+      <input type="hidden" name="rateCode" value= <% hotel["RoomRateDetailsList"]["RoomRateDetails"]["rateCode"]%>>
+      <input type="hidden" name="averageRate" value= <% hotel["RoomRateDetailsList"]["RoomRateDetails"]["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageRate"]%>>
 <button>Book Now</button>
 </form>
 <hr>
 <% end %>
+
 </html>
