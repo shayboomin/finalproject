@@ -20,6 +20,9 @@
 	</ol>
 	</div><br><br><br><br>
 	<h1>Hotel Search</h1>
+	<% if flash[:error] %>
+			<p><%= flash[:error] %></p>
+		<% end %>
 	<form action="/requestHotel" method='post'>
 		<input type="text" name="city" placeholder="Location, Destination, etc.">
 		<h2>Check-In Date</h2>
