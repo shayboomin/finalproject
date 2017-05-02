@@ -22,12 +22,6 @@
 <p>City: <%= hotel["city"] %></p>
 <p>Hotel Rating: <%= hotel['hotelRating'] %> </p>
 <p><%= raw CGI.unescapeHTML hotel["shortDescription"]%></p>
-<p>Rate: <%= hotel["highRate"] %></p>
-<p><%= hotel["hotelId"] %></p>
-<p><%= hotel["supplierType"] %></p>
-<p>Rate Key: <%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["RateInfos"]["RateInfo"]["RoomGroup"]["Room"]["rateKey"] %></p>
-<p>Room Type Code: <%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["roomTypeCode"] %></p>
-<p>Rate Code: <%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["rateCode"]%></p>
 <p>Average Rate:<%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageRate"]%>
 <form action="">
       <input type="hidden" name="hotelId" value= <%= hotel["hotelId"] %>>
