@@ -36,8 +36,12 @@ class BoomintravelController < ApplicationController
 		
 		#  place our parameters in this get_list method 
 		#   Parameters: {"city"=>"Bellevue", "checkIn"=>"2018-01-01", "checkOut"=>"2018-01-02"}
-		checkIn = Date.parse(params["checkIn"]).strftime("%m/%d/%Y")
-		checkOut = Date.parse(params["checkOut"]).strftime("%m/%d/%Y")
+		if not params["checkIn"].empty?
+			checkIn = Date.parse(params["checkIn"]).strftime("%m/%d/%Y")
+		end
+		if not params["checkOut"].empty?
+			checkOut = Date.parse(params["checkOut"]).strftime("%m/%d/%Y")
+		end
 		response = api.get_list({
 				:city => params["city"],
 				:countryCode=>"US", 
@@ -47,10 +51,16 @@ class BoomintravelController < ApplicationController
 		
 		puts '/' *80
 		puts response
-		@hotelList = response.body["HotelListResponse"]["HotelList"]["HotelSummary"]
-		@hotelList.each { |hotel| puts hotel["name"]; puts hotel["city"] }	
-		puts '/' *80
-		render 'hotelRequest'
+		begin response.error_body
+			flash[:error] = response.presentation_message
+			redirect_to '/hotel'
+		rescue
+			@hotelList = response.body["HotelListResponse"]["HotelList"]["HotelSummary"]
+			@hotelList.each { |hotel| puts hotel["name"]; puts hotel["city"] }	
+			puts '/' *80
+			render 'hotelRequest'
+		end
+		
 		# render a view with all those hotels displayed
 	end
 	def flight

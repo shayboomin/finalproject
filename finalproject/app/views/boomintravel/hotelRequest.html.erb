@@ -24,11 +24,13 @@
 <tr>
   <td><h2>Hotel Name</h2></td>
   <td><h2>City</h2></td>
-<td><h2>Rate</h2></td>
+  <td><h2>Hotel Rating</h2></td>
+  <td><h2>Average Rate</h2></td>
 </tr>
 <tr>
 <td><h3><%= hotel["name"] %></h3></td>
 <td><h3><%= hotel["city"] %></h3></td>
+<td><h3><%= hotel['hotelRating'] %></h3></td>
 <td><h3>USD <%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageRate"]%></h3></td>
 </tr>
 </tbody>
@@ -38,6 +40,14 @@
 <p>Rate Key: <%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["RateInfos"]["RateInfo"]["RoomGroup"]["Room"]["rateKey"] %></p>
 <p>Room Type Code: <%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["roomTypeCode"] %></p>
 <p>Rate Code: <%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["rateCode"]%></p>
+
+
+<%= hotel %>
+<h2>Hotel: <%= hotel["name"] %></h2>
+<p>City: <%= hotel["city"] %></p>
+<p>Hotel Rating: <%= hotel['hotelRating'] %> </p>
+<p><%= raw CGI.unescapeHTML hotel["shortDescription"]%></p>
+<p>Average Rate:<%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageRate"]%>
 
 <form action="">
       <input type="hidden" name="hotelId" value= <%= hotel["hotelId"] %>>
