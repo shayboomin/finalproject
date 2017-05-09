@@ -24,13 +24,13 @@
 			<p><%= flash[:error] %></p>
 		<% end %>
 	<form action="/requestHotel" method='post'>
-		<input type="text" name="city" placeholder="Location, Destination, etc.">
+		<input type="text" name="city" placeholder="Location, Destination, etc." size="22">
 		<h2>Check-In Date</h2>
 		<input type="date" name='checkIn' placeholder="mm/dd/yyyy">
 		<h2>Check-Out Date</h2>
 		<input type="date" name='checkOut' placeholder="mm/dd/yyyy">
-		<h2>Number of People</h2>
-		<button>Search for Hotels</button>
+<br><br>
+		<button style="width: 135px;">Search for Hotels</button>
 	</form>
 </div>
 </body>
