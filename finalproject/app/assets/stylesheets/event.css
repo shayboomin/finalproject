@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Questrial:400,200,300,800);
 
 html {background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));}
+li a:hover {background-color: #E1B27F;}
 figure.snip0016 {
   font-family: 'Raleway', Arial, sans-serif;
   color: #fff;
