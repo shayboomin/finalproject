@@ -2,6 +2,9 @@
 <head>
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 <link rel="stylesheet" href="assets/login.css">
+<style type="text/css">
+	#page {border: 2px solid white;}
+</style>
 	<title>Login</title>
 	<a href="/"><img src="/assets/logo_1.png" height="100px"></a>
 </head>
@@ -17,6 +20,7 @@
       <li><a href="event">EVENTS</a></li>
 	</ol>
 	</div><br><br><br>
+<div id="page">
 	<div class="login">
 		<form method="post" action="/login">
 			<br><h1>Login</h1>
@@ -60,6 +64,7 @@
 	      <%= f.submit "Create my account", class: "btn btn-primary" %>
 	    <% end %>
 	</div>
+</div>
 </div>
 </body>
 <footer>

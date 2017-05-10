@@ -5,6 +5,7 @@
 <style type="text/css">
       html {font-family: 'Questrial', sans-serif;}
 </style>
+<a href="/"><img src="/assets/logo_1.png" height="100px"></a>
 </head>
 	<div class="nav">
 	<ol id="nav">
@@ -41,13 +42,6 @@
 <p>Room Type Code: <%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["roomTypeCode"] %></p>
 <p>Rate Code: <%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["rateCode"]%></p>
 
-
-<h2>Hotel: <%= hotel["name"] %></h2>
-<p>City: <%= hotel["city"] %></p>
-<p>Hotel Rating: <%= hotel['hotelRating'] %> </p>
-<p><%= raw CGI.unescapeHTML hotel["shortDescription"]%></p>
-<p>Average Rate:<%= hotel["RoomRateDetailsList"]["RoomRateDetails"]["RateInfos"]["RateInfo"]["ChargeableRateInfo"]["@averageRate"]%>
-
 <form action="">
       <input type="hidden" name="hotelId" value= <%= hotel["hotelId"] %>>
       <input type="hidden" name="supplierType" value= <% hotel["supplierType"] %>>
@@ -55,9 +49,8 @@
       <input type="hidden" name="roomTypeCode" value= <% hotel["RoomRateDetailsList"]["RoomRateDetails"]["roomTypeCode"] %>>
       <input type="hidden" name="rateCode" value= <% hotel["RoomRateDetailsList"]["RoomRateDetails"]["rateCode"]%>>
 
-
-</form>
 <a href="book"><button>Book Now</button></a>
+</form>
 <hr>
 <% end %>
 
